@@ -71,7 +71,7 @@ export default function HeroSection() {
   }, [api]);
 
   return (
-    <section id="home" className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center pt-16 md:pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-16 md:pt-20 overflow-hidden">
       {/* Background Carousel */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Carousel 
@@ -97,56 +97,57 @@ export default function HeroSection() {
       </div>
       
       {/* Hero Content */}
-      <div className="container mx-auto px-4 text-center text-white relative z-10 py-8">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="font-cursive text-3xl sm:text-4xl md:text-7xl mb-2 md:mb-4"
-        >
-          Chidambaram<br className="block sm:hidden" /> New Moorthy Cafe
-        </motion.h1>
-        
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="font-serif text-xl sm:text-2xl md:text-4xl mb-4 md:mb-8 px-2"
-        >
-          Home to World's Best Parotta & Kadai Chicken
-        </motion.h2>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-base md:text-xl max-w-2xl mx-auto mb-6 md:mb-8 hidden md:block"
-        >
-          Over 70 years of culinary excellence in Tamil Nadu, serving authentic 
-          South Indian vegetarian and non-vegetarian dishes prepared with exclusive 
-          hand-picked spices and traditional methods.
-        </motion.p>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="flex flex-col sm:flex-row justify-center gap-4 mt-4 md:mt-0"
-        >
-          <Button 
-            onClick={() => scrollToSection("menu")}
-            className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 text-lg font-medium"
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white z-10 px-4 py-8">
+        <div className="w-full max-w-4xl">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="font-cursive text-3xl sm:text-4xl md:text-7xl mb-2 md:mb-4 leading-tight"
           >
-            View Menu
-          </Button>
-          <Button 
-            onClick={() => scrollToSection("contact")}
-            variant="outline" 
-            className="bg-white text-primary px-8 py-3 rounded-full hover:bg-white/90 transition-all duration-300 text-lg font-medium"
+            Chidambaram<br className="block sm:hidden" /> New Moorthy Cafe
+          </motion.h1>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="font-serif text-xl sm:text-2xl md:text-4xl mb-4 md:mb-8 px-2 leading-relaxed"
           >
-            Book a Table
-          </Button>
-        </motion.div>
+            Home to World's Best Parotta & Kadai Chicken
+          </motion.h2>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="text-sm sm:text-base md:text-xl max-w-2xl mx-auto mb-6 md:mb-8 hidden sm:block"
+          >
+            Over 70 years of culinary excellence in Tamil Nadu, serving authentic 
+            South Indian vegetarian and non-vegetarian dishes.
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="flex flex-col sm:flex-row justify-center gap-4 mt-6 md:mt-0"
+          >
+            <Button 
+              onClick={() => scrollToSection("menu")}
+              className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 text-base md:text-lg font-medium"
+            >
+              View Menu
+            </Button>
+            <Button 
+              onClick={() => scrollToSection("contact")}
+              variant="outline" 
+              className="bg-white text-primary px-8 py-3 rounded-full hover:bg-white/90 transition-all duration-300 text-base md:text-lg font-medium"
+            >
+              Book a Table
+            </Button>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
