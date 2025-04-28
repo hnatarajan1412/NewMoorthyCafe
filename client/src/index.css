@@ -84,4 +84,16 @@
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
+
+  /* Wave animation */
+  @keyframes wave-move {
+    from { background-position-x: 0; }
+    to { background-position-x: -200px; }
+  }
+  
+  .wave {
+    background: url('/assets/wave-red.svg') repeat-x bottom;
+    background-size: contain;
+    animation: wave-move 8s linear infinite;
+  }
 }

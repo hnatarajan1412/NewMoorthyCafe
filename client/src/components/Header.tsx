@@ -128,6 +128,11 @@ export default function Header() {
         </nav>
       </div>
       
+      {/* Wave Animation */}
+      <div className="w-full overflow-hidden">
+        <div className="wave h-16"></div>
+      </div>
+      
       {/* Mobile Navigation Menu */}
       <div 
         className={`${
