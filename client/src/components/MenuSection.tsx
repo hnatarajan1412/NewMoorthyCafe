@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-type CategoryType = 'All' | 'Appetizers' | 'Main Course' | 'Desserts';
+type CategoryType = 'All' | 'Tandoori' | 'Special Items' | 'Biryani' | 'South Indian';
 
 interface StaticMenuItem {
   id: number;
@@ -20,56 +20,56 @@ export default function MenuSection() {
   const staticMenuItems: StaticMenuItem[] = [
     {
       id: 1,
-      name: "Butter Chicken",
-      description: "Tender chicken in a rich, creamy tomato sauce with a blend of aromatic spices.",
-      price: 16.99,
-      category: "Main Course",
-      image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      name: "Parotta",
+      description: "Flaky, layered flatbread made from refined flour, a signature speciality of New Moorthy Cafe.",
+      price: 16,
+      category: "Special Items",
+      image: "/assets/images/menu-parotta.jpg",
       isPopular: true
     },
     {
       id: 2,
-      name: "Vegetable Biryani",
-      description: "Fragrant basmati rice cooked with mixed vegetables and aromatic spices.",
-      price: 14.99,
-      category: "Main Course",
-      image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-      isPopular: false
+      name: "Chicken Biryani",
+      description: "Aromatic basmati rice cooked with tender chicken pieces and traditional spices.",
+      price: 170,
+      category: "Biryani",
+      image: "/assets/images/menu-biryani.jpg",
+      isPopular: true
     },
     {
       id: 3,
-      name: "Paneer Tikka",
-      description: "Marinated cottage cheese cubes grilled to perfection with bell peppers and onions.",
-      price: 12.99,
-      category: "Appetizers",
-      image: "https://images.unsplash.com/photo-1517244683847-7456b63c5969?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      name: "Dosa",
+      description: "Crispy fermented rice and lentil crepe served with sambar and chutney.",
+      price: 60,
+      category: "South Indian",
+      image: "/assets/images/menu-dosa.jpg",
       isPopular: true
     },
     {
       id: 4,
-      name: "Chicken Tikka Masala",
-      description: "Grilled chicken pieces in a creamy, spiced tomato sauce with a hint of fenugreek.",
-      price: 17.99,
-      category: "Main Course",
-      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      name: "Kadai Chicken",
+      description: "Spicy chicken curry cooked with bell peppers and kadai masala in a thick gravy.",
+      price: 240,
+      category: "Special Items",
+      image: "/assets/images/menu-chicken.jpg",
       isPopular: true
     },
     {
       id: 5,
-      name: "Garlic Naan",
-      description: "Soft, leavened bread topped with garlic and butter, baked in a tandoor oven.",
-      price: 3.99,
-      category: "Appetizers",
-      image: "https://images.unsplash.com/photo-1628294895950-9805252327bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      name: "Tandoori Chicken",
+      description: "Chicken marinated in yogurt and spices, roasted in a traditional clay oven.",
+      price: 260,
+      category: "Tandoori",
+      image: "/assets/images/menu-chicken.jpg",
       isPopular: false
     },
     {
       id: 6,
-      name: "Gulab Jamun",
-      description: "Deep-fried milk solids soaked in rose-flavored sugar syrup, served warm.",
-      price: 5.99,
-      category: "Desserts",
-      image: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+      name: "Idli",
+      description: "Steamed rice cakes made from fermented batter, served with sambar and chutney.",
+      price: 60,
+      category: "South Indian",
+      image: "/assets/images/menu-idli.jpg",
       isPopular: true
     }
   ];
@@ -86,13 +86,13 @@ export default function MenuSection() {
           <h2 className="font-serif text-4xl md:text-5xl mb-4">Our Menu</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg max-w-4xl mx-auto text-gray-600">
-            Explore our wide selection of authentic Indian dishes prepared with love and tradition.
+            Explore our wide selection of authentic South Indian dishes prepared with exclusive hand-picked spices and traditional methods.
           </p>
         </div>
         
         <div className="flex justify-center mb-10 overflow-x-auto">
           <div className="flex space-x-4">
-            {(['All', 'Appetizers', 'Main Course', 'Desserts'] as CategoryType[]).map((category) => (
+            {(['All', 'Tandoori', 'Special Items', 'Biryani', 'South Indian'] as CategoryType[]).map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
@@ -138,7 +138,7 @@ export default function MenuSection() {
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-serif text-2xl">{item.name}</h3>
-                    <span className="text-primary font-bold">${item.price.toFixed(2)}</span>
+                    <span className="text-primary font-bold">₹{item.price}</span>
                   </div>
                   <p className="text-gray-600 mb-4">{item.description}</p>
                   <button className="text-primary font-medium hover:underline">Add to Order</button>

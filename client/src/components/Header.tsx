@@ -50,7 +50,7 @@ export default function Header() {
               <img 
                 src="/assets/NMC_Logo.png" 
                 alt="Chidambaram New Moorthy Cafe Logo" 
-                className="h-16 mr-2"
+                className="h-12 md:h-16 mr-2"
               />
             </a>
           </div>

@@ -71,7 +71,7 @@ export default function HeroSection() {
   }, [api]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center pt-16 md:pt-20 overflow-hidden">
       {/* Background Carousel */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Carousel 
@@ -97,21 +97,21 @@ export default function HeroSection() {
       </div>
       
       {/* Hero Content */}
-      <div className="container mx-auto px-4 text-center text-white relative z-10">
+      <div className="container mx-auto px-4 text-center text-white relative z-10 py-8">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="font-cursive text-5xl md:text-7xl mb-4"
+          className="font-cursive text-3xl sm:text-4xl md:text-7xl mb-2 md:mb-4"
         >
-          Chidambaram New Moorthy Cafe
+          Chidambaram<br className="block sm:hidden" /> New Moorthy Cafe
         </motion.h1>
         
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="font-serif text-2xl md:text-4xl mb-8"
+          className="font-serif text-xl sm:text-2xl md:text-4xl mb-4 md:mb-8 px-2"
         >
           Home to World's Best Parotta & Kadai Chicken
         </motion.h2>
@@ -120,7 +120,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="text-lg md:text-xl max-w-2xl mx-auto mb-8"
+          className="text-base md:text-xl max-w-2xl mx-auto mb-6 md:mb-8 hidden md:block"
         >
           Over 70 years of culinary excellence in Tamil Nadu, serving authentic 
           South Indian vegetarian and non-vegetarian dishes prepared with exclusive 
@@ -131,7 +131,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="flex flex-col sm:flex-row justify-center gap-4"
+          className="flex flex-col sm:flex-row justify-center gap-4 mt-4 md:mt-0"
         >
           <Button 
             onClick={() => scrollToSection("menu")}
