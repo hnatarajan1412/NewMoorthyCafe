@@ -1,0 +1,118 @@
+## Replit Agent Instructions: Add Banner Slider & Animated Wave
+
+Below are the exact file changes and commands your Replit coding agent can apply. Copy–paste each section into your agent’s script.
+
+---
+
+### 1. Install Swiper
+```bash
+deno task npm-install swiper
+```  
+*(Or `npm install swiper` if you’re using plain npm.)*
+
+---
+
+### 2. Create `components/BannerSlider.tsx`
+```tsx
+// components/BannerSlider.tsx
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Autoplay } from 'swiper';
+
+export function BannerSlider({ images }: { images: string[] }) {
+  return (
+    <div className="relative">
+      <Swiper
+        modules={[Autoplay]}
+        loop
+        autoplay={{ delay: 3000 }}
+        slidesPerView={3}
+        spaceBetween={16}
+        className="py-8"
+      >
+        {images.map((src, idx) => (
+          <SwiperSlide key={idx}>
+            <div
+              className="w-full h-64 bg-center bg-cover"
+              style={{
+                backgroundImage: `url(${src})`,
+                clipPath: 'polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)'
+              }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+}
+```
+
+---
+
+### 3. Update `components/HeroSection.tsx`
+Replace the existing section with this:
+```diff
+-export default function HeroSection() {
+-  /* existing scrollToSection */
+-
+-  return (
+-    <section id="home" className="relative ...">
+-      {/* old background & content */}
+-    </section>
+-  );
+-}
++import { BannerSlider } from './BannerSlider';
++export default function HeroSection() {
++  const images = [
++    '/assets/images/dish1.jpg',
++    '/assets/images/dish2.jpg',
++    '/assets/images/dish3.jpg',
++    // add more
++  ];
++  return (
++    <section id="home" className="pt-[60px] md:pt-[80px]">
++      <BannerSlider images={images} />
++    </section>
++  );
++}
+```
+
+---
+
+### 4. Add Wave Bar in `components/Header.tsx`
+Insert right **below** the `<nav>` container:
+```diff
+   </div>  {/* container */}
++
++  <div className="w-full overflow-hidden">
++    <div className="wave h-16"></div>
++  </div>
+```
+
+---
+
+### 5. Add Global CSS for the Wave
+Append to your global stylesheet (e.g. `styles/globals.css`):
+```css
+@keyframes wave-move {
+  from { background-position-x:    0; }
+  to   { background-position-x: -200px; }
+}
+.wave {
+  background: url('/assets/wave-red.svg') repeat-x bottom;
+  background-size: contain;
+  animation: wave-move 8s linear infinite;
+}
+```
+
+---
+
+### 6. Commit & Test
+1. Run `npm run dev` in Replit.  
+2. Check that the banner cycles through your images in clipped shapes.  
+3. Scroll the page: the red wave under the nav should animate continuously.
+
+
+*— End of Instructions —*
+
