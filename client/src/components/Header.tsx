@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMobileMenu } from "@/hooks/use-mobile-menu";
+import { useLocation } from "wouter";
 
 export default function Header() {
   const { isOpen, toggle } = useMobileMenu();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
+  const isHomePage = location === "/";
   
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +24,19 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: "smooth"
-      });
+    if (isHomePage) {
+      // If on home page, scroll to the section
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 80,
+          behavior: "smooth"
+        });
+        if (isOpen) toggle();
+      }
+    } else {
+      // If not on home page, navigate to home page with hash
+      window.location.href = `/#${id}`;
       if (isOpen) toggle();
     }
   };
@@ -36,7 +46,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-2">
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="text-3xl font-bold font-cursive text-primary">Thaliwala</a>
+            <a href="/" className="text-3xl font-bold font-cursive text-primary">Thaliwala</a>
           </div>
           
           {/* Desktop Navigation */}

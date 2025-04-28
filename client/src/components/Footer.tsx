@@ -29,12 +29,12 @@ export default function Footer() {
           <div>
             <h4 className="text-xl mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#menu" className="hover:text-primary transition-colors">Menu</a></li>
-              <li><a href="#gallery" className="hover:text-primary transition-colors">Gallery</a></li>
-              <li><a href="#reviews" className="hover:text-primary transition-colors">Reviews</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/#home" className="hover:text-primary transition-colors">Home</a></li>
+              <li><a href="/#about" className="hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/#menu" className="hover:text-primary transition-colors">Menu</a></li>
+              <li><a href="/#gallery" className="hover:text-primary transition-colors">Gallery</a></li>
+              <li><a href="/#reviews" className="hover:text-primary transition-colors">Reviews</a></li>
+              <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="/franchise" className="text-primary transition-colors">Franchise</a></li>
             </ul>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
             <h4 className="text-xl mb-4">Visit Us</h4>
             <p className="mb-4">We're open 7 days a week. Come experience the authentic taste of India.</p>
             <Button 
-              onClick={() => window.location.href = '#contact'}
+              onClick={() => window.location.href = '/#contact'}
               className="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition-all duration-300"
             >
               Contact Us
