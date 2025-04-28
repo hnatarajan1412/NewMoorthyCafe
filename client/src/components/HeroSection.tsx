@@ -23,7 +23,31 @@ export default function HeroSection() {
 
   return (
     <>
-      <section id="home" className="pt-[60px] md:pt-[80px]">
+      <section id="home" className="pt-[60px] md:pt-[80px] relative">
+        {/* Gradient overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#C30010]/90 to-[#C30010]/80 z-10"></div>
+        
+        {/* Texture overlay */}
+        <div 
+          className="absolute top-0 left-0 w-full h-full opacity-20 z-10"
+          style={{
+            backgroundImage: 'url("/assets/images/red-texture.jpg")',
+            backgroundSize: 'cover',
+            backgroundBlendMode: 'multiply'
+          }}
+        ></div>
+        
+        {/* Main title */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center w-full px-4">
+          <div className="bg-[#C30010]/60 backdrop-blur-sm p-6 rounded-lg inline-block">
+            <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg mb-2">
+              Authentic South Indian Cuisine
+            </h1>
+            <div className="w-32 h-1 bg-[#FFB800] mx-auto mb-4"></div>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg">Since 1955</p>
+          </div>
+        </div>
+        
         <BannerSlider images={images} />
       </section>
 
@@ -35,14 +59,27 @@ export default function HeroSection() {
           backgroundPosition: 'center'
         }}
       >
+        {/* Top decorative border */}
+        <div className="absolute top-0 left-0 w-full flex justify-center">
+          <div className="w-1/2 h-2 bg-[#FFB800]"></div>
+        </div>
+        
+        {/* Corner decorative elements */}
+        <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-[#FFB800] opacity-70"></div>
+        <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-[#FFB800] opacity-70"></div>
+        <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-[#FFB800] opacity-70"></div>
+        <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-[#FFB800] opacity-70"></div>
+        
         <div className="absolute inset-0 bg-gradient-to-r from-[#C30010]/90 to-[#C30010]/80 mix-blend-multiply"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 text-white mb-10 md:mb-0">
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight uppercase tracking-wide">
+              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight uppercase tracking-wide">
                 Chidambaram<br/>New Moorthy Cafe
               </h1>
+              
+              <div className="w-24 h-1 bg-[#FFB800] mb-6"></div>
               
               <h2 className="font-medium text-xl sm:text-2xl md:text-3xl mb-6 leading-relaxed">
                 Home to World's Best Parotta & Kadai Chicken
@@ -50,20 +87,20 @@ export default function HeroSection() {
               
               <p className="text-base md:text-lg max-w-2xl mb-8 text-white/90">
                 Over 70 years of culinary excellence, serving authentic 
-                South Indian cuisine.
+                South Indian cuisine with time-honored family recipes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={() => scrollToSection("menu")}
-                  className="bg-[#FFB800] text-[#C30010] px-8 py-3 rounded hover:bg-[#FFB800]/90 transition-all duration-300 text-base font-bold uppercase"
+                  className="bg-[#FFB800] text-[#C30010] px-8 py-3 rounded-md hover:bg-[#FFB800]/90 transition-all duration-300 text-base font-bold uppercase shadow-lg"
                 >
                   View Menu
                 </Button>
                 <Button 
                   onClick={() => scrollToSection("contact")}
                   variant="outline" 
-                  className="border-2 border-white bg-transparent text-white px-8 py-3 rounded hover:bg-white/10 transition-all duration-300 text-base font-medium uppercase"
+                  className="border-2 border-[#FFB800] bg-transparent text-[#FFB800] px-8 py-3 rounded-md hover:bg-[#FFB800]/10 transition-all duration-300 text-base font-medium uppercase"
                 >
                   Book a Table
                 </Button>
@@ -75,13 +112,17 @@ export default function HeroSection() {
                 <img 
                   src="/assets/images/menu-biryani.jpg" 
                   alt="Delicious Biryani" 
-                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-[#FFB800]"
+                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-[#FFB800] shadow-xl"
                 />
                 <img 
                   src="/assets/circle-frame-gold.svg"
                   alt=""
                   className="absolute -top-5 -left-5 -right-5 -bottom-5 w-[calc(100%+40px)] h-[calc(100%+40px)] animate-spin-slow"
                 />
+                
+                {/* Decorative floating elements */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 rounded-full border-2 border-[#FFB800] opacity-50"></div>
+                <div className="absolute -bottom-8 -left-4 w-8 h-8 rounded-full border-2 border-[#FFB800] opacity-30"></div>
               </div>
             </div>
           </div>

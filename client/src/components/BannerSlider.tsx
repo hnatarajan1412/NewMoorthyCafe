@@ -21,27 +21,32 @@ export function BannerSlider({ images }: { images: string[] }) {
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 0,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 16,
+            spaceBetween: 0,
           }
         }}
-        spaceBetween={16}
-        className="py-8"
+        spaceBetween={0}
+        className="py-0"
       >
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="w-full h-48 md:h-64 bg-center bg-cover rounded-md overflow-hidden border-2 border-[#FFB800]"
+              className="w-full h-[50vh] bg-center bg-cover relative"
               style={{
                 backgroundImage: `url(${src})`
               }}
-            />
+            >
+              <div className="absolute inset-0 border-r-2 border-[#FFB800]/50"></div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
+      
+      {/* Bottom Border */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-[#FFB800] z-30"></div>
     </div>
   );
 }
