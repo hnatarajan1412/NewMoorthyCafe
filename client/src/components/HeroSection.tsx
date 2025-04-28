@@ -28,41 +28,62 @@ export default function HeroSection() {
       </section>
 
       <section 
-        className="relative min-h-[60vh] flex flex-col items-center justify-center"
+        className="relative py-16 md:py-24"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/images/southindian_thali.jpg")',
+          backgroundImage: 'url("/assets/images/red-texture.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="container mx-auto px-4 py-12 md:py-16 text-center text-white z-10">
-          <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight">
-            Chidambaram New Moorthy Cafe
-          </h1>
-          
-          <h2 className="font-medium text-lg sm:text-xl md:text-3xl mb-4 md:mb-6 leading-relaxed px-2">
-            Home to World's Best Parotta & Kadai Chicken
-          </h2>
-          
-          <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 md:mb-8 opacity-90">
-            Over 70 years of culinary excellence, serving authentic 
-            South Indian cuisine.
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mx-auto max-w-xs sm:max-w-md">
-            <Button 
-              onClick={() => scrollToSection("menu")}
-              className="bg-primary text-white w-full px-6 py-2.5 rounded-full hover:bg-primary/90 transition-all duration-300 text-base font-medium"
-            >
-              View Menu
-            </Button>
-            <Button 
-              onClick={() => scrollToSection("contact")}
-              variant="outline" 
-              className="bg-white text-primary w-full px-6 py-2.5 rounded-full hover:bg-white/90 transition-all duration-300 text-base font-medium"
-            >
-              Book a Table
-            </Button>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#C30010]/90 to-[#C30010]/80 mix-blend-multiply"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="w-full md:w-1/2 text-white mb-10 md:mb-0">
+              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight uppercase tracking-wide">
+                Chidambaram<br/>New Moorthy Cafe
+              </h1>
+              
+              <h2 className="font-medium text-xl sm:text-2xl md:text-3xl mb-6 leading-relaxed">
+                Home to World's Best Parotta & Kadai Chicken
+              </h2>
+              
+              <p className="text-base md:text-lg max-w-2xl mb-8 text-white/90">
+                Over 70 years of culinary excellence, serving authentic 
+                South Indian cuisine.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={() => scrollToSection("menu")}
+                  className="bg-[#FFB800] text-[#C30010] px-8 py-3 rounded hover:bg-[#FFB800]/90 transition-all duration-300 text-base font-bold uppercase"
+                >
+                  View Menu
+                </Button>
+                <Button 
+                  onClick={() => scrollToSection("contact")}
+                  variant="outline" 
+                  className="border-2 border-white bg-transparent text-white px-8 py-3 rounded hover:bg-white/10 transition-all duration-300 text-base font-medium uppercase"
+                >
+                  Book a Table
+                </Button>
+              </div>
+            </div>
+            
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="relative">
+                <img 
+                  src="/assets/images/menu-biryani.jpg" 
+                  alt="Delicious Biryani" 
+                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-[#FFB800]"
+                />
+                <img 
+                  src="/assets/circle-frame-gold.svg"
+                  alt=""
+                  className="absolute -top-5 -left-5 -right-5 -bottom-5 w-[calc(100%+40px)] h-[calc(100%+40px)] animate-spin-slow"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

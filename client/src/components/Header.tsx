@@ -42,60 +42,60 @@ export default function Header() {
   };
 
   return (
-    <header id="header" className={`fixed w-full bg-white z-50 ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}>
-      <div className="container mx-auto px-4 py-1 md:py-2">
+    <header id="header" className={`fixed w-full z-50 bg-[#C30010] text-white`}>
+      <div className="container mx-auto px-4 py-1 md:py-3">
         <nav className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <a href="/" className="flex items-center">
               <img 
                 src="/assets/NMC_Logo.png" 
                 alt="Chidambaram New Moorthy Cafe Logo" 
-                className="h-10 md:h-16"
+                className="h-12 md:h-16 rounded-full border-2 border-[#FFB800] bg-white p-1"
               />
             </a>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-4 xl:space-x-6">
+          <div className="hidden md:flex space-x-6 xl:space-x-8">
             <a 
               onClick={() => scrollToSection("home")} 
-              className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               Home
             </a>
             <a 
               onClick={() => scrollToSection("about")} 
-              className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               About Us
             </a>
             <a 
               onClick={() => scrollToSection("menu")} 
-              className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               Menu
             </a>
             <a 
               onClick={() => scrollToSection("gallery")} 
-              className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               Gallery
             </a>
             <a 
               onClick={() => scrollToSection("reviews")} 
-              className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               Reviews
             </a>
             <a 
               onClick={() => scrollToSection("contact")} 
-              className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               Contact
             </a>
             <a 
               href="/franchise" 
-              className="font-medium text-primary transition-colors duration-300 cursor-pointer"
+              className="font-medium text-[#FFB800] transition-colors duration-300 cursor-pointer uppercase tracking-wide"
             >
               Franchise
             </a>
@@ -103,12 +103,15 @@ export default function Header() {
           
           {/* Order Button - Desktop */}
           <div className="hidden md:block">
-            <Button 
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition-all duration-300"
-            >
-              Order Now
-            </Button>
+            <div className="rounded bg-white px-3 py-2 text-center">
+              <div className="font-bold text-[#C30010] text-sm">Order Now</div>
+              <Button 
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#FFB800] text-[#C30010] px-4 py-1 rounded font-bold hover:bg-[#FFB800]/90 transition-all duration-300 text-sm"
+              >
+                +91 93808 99999
+              </Button>
+            </div>
           </div>
           
           {/* Mobile Menu Button */}
@@ -119,76 +122,81 @@ export default function Header() {
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? (
-                <X className="h-6 w-6 text-primary" />
+                <X className="h-6 w-6 text-white" />
               ) : (
-                <Menu className="h-6 w-6 text-primary" />
+                <Menu className="h-6 w-6 text-white" />
               )}
             </button>
           </div>
         </nav>
       </div>
       
-      {/* Wave Animation */}
+      {/* Wave Pattern */}
       <div className="w-full overflow-hidden">
-        <div className="wave h-16"></div>
+        <svg viewBox="0 0 1200 30" className="fill-[#FFB800] w-full h-6">
+          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
+        </svg>
       </div>
       
       {/* Mobile Navigation Menu */}
       <div 
         className={`${
           isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } bg-white w-full absolute top-full left-0 shadow-md md:hidden overflow-hidden transition-all duration-300`}
+        } bg-[#C30010] border-t-2 border-[#FFB800] w-full absolute top-full left-0 shadow-md md:hidden overflow-hidden transition-all duration-300`}
       >
         <div className="flex flex-col p-4 space-y-3">
           <a 
             onClick={() => scrollToSection("home")} 
-            className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             Home
           </a>
           <a 
             onClick={() => scrollToSection("about")} 
-            className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             About Us
           </a>
           <a 
             onClick={() => scrollToSection("menu")} 
-            className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             Menu
           </a>
           <a 
             onClick={() => scrollToSection("gallery")} 
-            className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             Gallery
           </a>
           <a 
             onClick={() => scrollToSection("reviews")} 
-            className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             Reviews
           </a>
           <a 
             onClick={() => scrollToSection("contact")} 
-            className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-white hover:text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             Contact
           </a>
           <a 
             href="/franchise" 
-            className="font-medium text-primary transition-colors duration-300 cursor-pointer py-1"
+            className="font-medium text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
           >
             Franchise
           </a>
           <div className="pt-2">
-            <Button 
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition-all duration-300 w-full"
-            >
-              Order Now
-            </Button>
+            <div className="bg-white rounded-md p-2 flex flex-col items-center">
+              <div className="text-[#C30010] font-bold mb-1">Order Now</div>
+              <Button 
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#FFB800] text-[#C30010] px-4 py-1 rounded font-bold hover:bg-[#FFB800]/90 transition-all duration-300 w-full"
+              >
+                +91 93808 99999
+              </Button>
+            </div>
           </div>
         </div>
       </div>
