@@ -26,7 +26,7 @@ export default function Franchise() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl max-w-4xl mx-auto mb-8"
             >
-              Join the Thaliwala family and bring authentic Indian cuisine to your community
+              Join the Chidambaram New Moorthy Cafe family and bring authentic South Indian cuisine to your community
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -54,10 +54,10 @@ export default function Franchise() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-gray-700 mb-4 text-lg">
-                  The history of Thaliwala dates back to 1955, when it was founded with a vision to bring authentic Indian flavors to food lovers everywhere. What began as a humble café quickly gained fame for its unique taste and hospitality.
+                  The history of New Moorthy Cafe dates back to 1955, when it was founded by Mr. S. Dhakshina Moorthy and Mrs. Nagavalli Ammal. Originally established as Moorthy Cafe Veg and Non-Veg Hotel, it quickly gained fame for its unique taste and name.
                 </p>
                 <p className="text-gray-700 mb-6 text-lg">
-                  Over the years, we've expanded our presence while staying true to our roots - using exclusive hand-picked spices and ingredients, preparing food using traditional methods, and maintaining our deep commitment to delighting your taste buds.
+                  After Mr. Moorthy, his sons took over and expanded the business. As a testament to its success, multiple branches under the New Moorthy Cafe brand have opened across Chidambaram and other areas, all while maintaining our deep commitment to delighting your taste buds.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-50 p-4 rounded-lg text-center">
@@ -159,7 +159,7 @@ export default function Franchise() {
               <h2 className="font-serif text-4xl md:text-5xl mb-4">Why Partner With Us?</h2>
               <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
               <p className="text-lg max-w-4xl mx-auto text-gray-600">
-                Joining the Thaliwala family means benefiting from our proven business model, time-tested recipes, and comprehensive support
+                Joining the Chidambaram New Moorthy Cafe family means benefiting from our proven business model, time-tested recipes, and comprehensive support
               </p>
             </div>
             

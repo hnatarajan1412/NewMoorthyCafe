@@ -44,11 +44,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <MapPin className="mt-1 mr-2" size={16} />
-                <span>123 Main Street, New York, NY 10001</span>
+                <span>North Main Road, Chidambaram, Tamil Nadu, India</span>
               </li>
               <li className="flex items-start">
                 <Phone className="mt-1 mr-2" size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-96778 00889</span>
               </li>
               <li className="flex items-start">
                 <Mail className="mt-1 mr-2" size={16} />
@@ -63,7 +63,7 @@ export default function Footer() {
           
           <div>
             <h4 className="text-xl mb-4">Visit Us</h4>
-            <p className="mb-4">We're open 7 days a week. Come experience the authentic taste of India.</p>
+            <p className="mb-4">We're open 7 days a week. Come experience the authentic taste of South Indian cuisine.</p>
             <Button 
               onClick={() => window.location.href = '/#contact'}
               className="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition-all duration-300"
