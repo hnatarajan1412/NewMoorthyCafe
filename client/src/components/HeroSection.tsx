@@ -24,26 +24,13 @@ export default function HeroSection() {
   return (
     <>
       <section id="home" className="pt-[60px] md:pt-[80px] relative">
-        {/* Gradient overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#C30010]/90 to-[#C30010]/80 z-10"></div>
-        
-        {/* Texture overlay */}
-        <div 
-          className="absolute top-0 left-0 w-full h-full opacity-20 z-10"
-          style={{
-            backgroundImage: 'url("/assets/images/red-texture.jpg")',
-            backgroundSize: 'cover',
-            backgroundBlendMode: 'multiply'
-          }}
-        ></div>
-        
         {/* Main title */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center w-full px-4">
-          <div className="bg-[#C30010]/60 backdrop-blur-sm p-6 rounded-lg inline-block">
+          <div className="bg-black/30 backdrop-blur-sm py-8 px-10 rounded-lg inline-block border-2 border-[#FFB800]">
             <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg mb-2">
-              Authentic South Indian Cuisine
+              Chidambaram New Moorthy Cafe
             </h1>
-            <div className="w-32 h-1 bg-[#FFB800] mx-auto mb-4"></div>
+            <div className="w-40 h-1 bg-[#FFB800] mx-auto mb-6"></div>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg">Since 1955</p>
           </div>
         </div>

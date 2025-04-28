@@ -36,7 +36,9 @@ export function BannerSlider({ images }: { images: string[] }) {
             <div
               className="w-full h-[50vh] bg-center bg-cover relative"
               style={{
-                backgroundImage: `url(${src})`
+                backgroundImage: `url(${src})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
               }}
             >
               <div className="absolute inset-0 border-r-2 border-[#FFB800]/50"></div>
