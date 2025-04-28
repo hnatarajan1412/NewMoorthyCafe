@@ -34,10 +34,9 @@ export function BannerSlider({ images }: { images: string[] }) {
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="w-full h-48 md:h-64 bg-center bg-cover"
+              className="w-full h-48 md:h-64 bg-center bg-cover rounded-md overflow-hidden border-2 border-[#FFB800]"
               style={{
-                backgroundImage: `url(${src})`,
-                clipPath: 'polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)'
+                backgroundImage: `url(${src})`
               }}
             />
           </SwiperSlide>

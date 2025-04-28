@@ -81,16 +81,11 @@ export default function MenuSection() {
 
   return (
     <section id="menu" className="py-16 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-8">
-        <svg viewBox="0 0 1200 30" className="fill-[#C30010] w-full h-8 rotate-180">
-          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
-        </svg>
-      </div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-[#C30010]"></div>
     
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#C30010] uppercase tracking-wide">Our Menu</h2>
-          <div className="w-24 h-1 bg-[#FFB800] mx-auto mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#C30010] uppercase tracking-wide border-b-4 border-[#FFB800] pb-2 inline-block px-8">Our Menu</h2>
           <p className="text-gray-700 max-w-4xl mx-auto">
             Explore our wide selection of authentic South Indian dishes prepared with exclusive hand-picked spices and traditional methods.
           </p>
@@ -170,11 +165,7 @@ export default function MenuSection() {
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 w-full h-8">
-        <svg viewBox="0 0 1200 30" className="fill-[#C30010] w-full h-8">
-          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
-        </svg>
-      </div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-[#C30010]"></div>
     </section>
   );
 }
