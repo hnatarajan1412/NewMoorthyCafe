@@ -21,7 +21,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="font-cursive text-6xl md:text-8xl mb-4"
         >
-          Thaliwala
+          Chidambaram New Moorthy Cafe
         </motion.h1>
         
         <motion.h2 
@@ -30,7 +30,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.5 }}
           className="font-serif text-2xl md:text-4xl mb-8"
         >
-          Authentic Indian Cuisine
+          Home to World's Best Parotta & Kadai Chicken
         </motion.h2>
         
         <motion.p 
@@ -39,8 +39,9 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 1 }}
           className="text-lg md:text-xl max-w-2xl mx-auto mb-8"
         >
-          Experience the rich flavors and traditions of India with our carefully crafted dishes 
-          made from authentic recipes and the finest ingredients.
+          Over 70 years of culinary excellence in Tamil Nadu, serving authentic 
+          South Indian vegetarian and non-vegetarian dishes prepared with exclusive 
+          hand-picked spices and traditional methods.
         </motion.p>
         
         <motion.div 

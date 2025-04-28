@@ -141,7 +141,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Address</h4>
-                  <p className="text-gray-600">123 Main Street, New York, NY 10001</p>
+                  <p className="text-gray-600">North Main Road, Chidambaram, Tamil Nadu, India</p>
                 </div>
               </div>
               
@@ -151,7 +151,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Phone</h4>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+91-96778 00889</p>
                 </div>
               </div>
               

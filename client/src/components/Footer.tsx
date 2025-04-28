@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-cursive text-3xl text-primary mb-4">Thaliwala</h3>
+            <h3 className="font-cursive text-3xl text-primary mb-4">Chidambaram New Moorthy Cafe</h3>
             <p className="mb-4">
-              Experience the authentic taste of India with our carefully crafted dishes 
-              made from traditional recipes.
+              Since 1955, we've been serving authentic South Indian cuisine with 
+              exclusive hand-picked spices and traditional methods.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-primary transition-colors">
@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail className="mt-1 mr-2" size={16} />
-                <span>info@thaliwala.com</span>
+                <span>info@newmoorthycafe.com</span>
               </li>
               <li className="flex items-start">
                 <Clock className="mt-1 mr-2" size={16} />
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Thaliwala. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Chidambaram New Moorthy Cafe. All rights reserved.</p>
         </div>
       </div>
     </footer>
