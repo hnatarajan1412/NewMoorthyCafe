@@ -1,7 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState, useRef } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 export default function HeroSection() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const intervalRef = useRef<number | null>(null);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -12,14 +25,84 @@ export default function HeroSection() {
     }
   };
 
+  const carouselImages = [
+    {
+      src: "/assets/images/southindian_food1.jpg",
+      alt: "South Indian Dishes"
+    },
+    {
+      src: "/assets/images/dosa.jpg",
+      alt: "South Indian Dosa"
+    },
+    {
+      src: "/assets/images/southindian_thali.jpg",
+      alt: "South Indian Thali"
+    }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    if (!api) return;
+    
+    // Set up auto-advance
+    intervalRef.current = window.setInterval(() => {
+      api.scrollNext();
+    }, 5000);
+    
+    // Clean up interval on unmount
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap() || 0);
+    };
+    
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
   return (
-    <section id="home" className="hero-section min-h-screen flex items-center justify-center pt-20">
-      <div className="container mx-auto px-4 text-center text-white">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Background Carousel */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Carousel 
+          className="w-full h-full" 
+          opts={{ loop: true, duration: 50 }}
+          setApi={setApi}
+        >
+          <CarouselContent className="h-full">
+            {carouselImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full">
+                <div className="w-full h-full relative">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+      
+      {/* Hero Content */}
+      <div className="container mx-auto px-4 text-center text-white relative z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="font-cursive text-6xl md:text-8xl mb-4"
+          className="font-cursive text-5xl md:text-7xl mb-4"
         >
           Chidambaram New Moorthy Cafe
         </motion.h1>

@@ -1,0 +1,267 @@
+# New Moorthy Cafe – Full Menu (Text Version)
+
+*(All prices are in Indian Rupees)*
+
+---
+
+## Soup
+- **Mushroom** – 80
+- **Hot & Sour Vegetable** – 90
+- **Vegetable Clear Soup** – 60
+- **Hot & Sour Chicken Soup** – 75
+- **Chicken Clear Soup** – 90
+
+## Shawarma
+- **Chicken Shawarma** – 100
+- **Mexican Shawarma** – 120
+- **Special Chicken Shawarma** – 130
+- **Plate Shawarma** – 150
+- **Chicken Tikka Shawarma** – 160
+
+## Salads & Raitha
+- **Green Salad** – 80
+- **Onion Salad** – 70
+- **Cucumber Salad** – 75
+- **Carrot Salad** – 75
+- **Onion Raitha** – 25
+- **Cup of Onion** – 20
+
+## Tandoori (Starters)
+- **Tandoori Chicken (Full)** – 520
+- **Tandoori Chicken (Half)** – 260
+- **Chicken Tikka (8 pcs)** – 220
+- **Tangri Kebab (4 pcs)** – 260
+- **Tangri Kebab (2 pcs)** – 130
+
+---
+
+## Special Chicken Starter
+- **Grill Chicken (Full)** – 480
+- **Grill Chicken (Half)** – 240
+- **Chicken – 74 (Full)** – 480
+- **Chicken – 74 (Half)** – 240
+- **Chicken – 85 (Full)** – 520
+- **Chicken – 85 (Half)** – 260
+- **Chicken Wings (10 pcs)** – 190
+- **Dragon Chicken – Dry** – 240
+
+## Chicken Starters
+- **Chicken Lollypop** – 210
+- **Chicken – 007** – 130
+- **Kal Pepper Chicken** – 140
+- **Chicken Onion Roast** – 140
+- **Chicken – 65** – 210
+- **Chilly Chicken** – 210
+- **Chicken Pepper Fry** – 220
+- **Chicken Hyderabad** – 220
+- **Chicken Manchurian** – 220
+- **Garlic Chicken** – 210
+- **Chicken Keema Fry** – 210
+
+---
+
+## Seafood Starters
+- **Fish Fry** – 200
+- **Chilly Fish** – 200
+- **Fish Manchurian** – 220
+- **Prawn – 65** – 200
+- **Chilly Prawn** – 220
+- **Prawn Manchurian** – 220
+- **Prawn Fry** – 220
+- **Fish – 65** – 190
+- **Nethili Fish – 65** – 190
+
+## Mutton Starters
+- **Mutton Chukka Fry** – 220
+- **Mutton Pepper Fry** – 230
+- **Chilly Mutton** – 230
+
+## Veg Starters
+- **Gobi – 65** – 160
+- **Gobi Manchurian** – 160
+- **Chilly Gobi** – 170
+- **Paneer – 65** – 180
+- **Paneer Manchurian** – 180
+- **Chilly Paneer** – 190
+- **Mushroom – 65** – 170
+- **Mushroom Manchurian** – 180
+- **Chilly Mushroom** – 170
+- **Mushroom Pepper Fry** – 180
+- **Paneer Tikka** – 200
+
+## Egg Starters
+- **Omelette** – 25
+- **Jumbo Omelette** – 60
+- **Half Boil / Full Boil** – 18
+- **Boiled Egg** – 12
+- **Egg Podimas** – 70
+- **Egg Chutney** – 70
+- **Tomato Chutney** – 60
+
+---
+
+## Chicken Gravies
+- **Kadai Chicken** – 240
+- **Chettinadu Chicken** – 240
+- **Chilly Chicken** – 240
+- **Ginger Chicken** – 240
+- **Garlic Chicken** – 240
+- **Coconut Chicken** – 230
+- **Butter Chicken** – 240
+- **Pepper Chicken** – 240
+- **Chicken Manchurian** – 240
+- **Hyderabad Chicken** – 240
+- **Chicken Moghalai** – 240
+- **Chicken-do-Piyazza** – 240
+- **Chicken Kheema Masala** – 240
+- **Chicken Tikka Masala** – 240
+- **Egg Masala (3 pcs)** – 150
+- **Egg Curry (2 pcs)** – 150
+
+## Mutton Gravies
+- **Mutton Chettinadu** – 260
+- **Mutton Kadai** – 260
+- **Mutton Masala** – 260
+- **Mutton Mogalai** – 260
+- **Mutton do-Piyazza** – 260
+
+## Veg Gravies
+- **Paneer Butter Masala** – 190
+- **Paneer Manchurian** – 200
+- **Chilly Paneer** – 200
+- **Kadai Paneer** – 200
+- **Paneer-do-Piyazza** – 200
+- **Gobi Manchurian** – 190
+- **Gobi Masala** – 170
+- **Chilly Gobi** – 180
+- **Mushroom Kadai** – 180
+- **Mushroom Masala** – 180
+- **Mushroom Manchurian** – 190
+- **Chilly Mushroom** – 190
+- **Mixed-Veg Curry** – 190
+- **Kadai Vegetables** – 190
+- **Chettinadu Vegetables** – 190
+
+## Seafood Gravies
+- **Malabar Fish Curry** – 230
+- **Chilly Fish** – 230
+- **Fish Manchurian** – 230
+- **Fish Chettinadu** – 230
+- **Kadai Fish** – 230
+- **Prawn Masala** – 230
+- **Chilly Prawn** – 230
+- **Prawn Manchurian** – 230
+- **Prawn Chettinadu** – 230
+- **Prawn Kadai** – 240
+
+---
+
+## Briyani / Rice Varieties *(Non-Veg)*
+- **Chicken Briyani** – 170
+- **Mutton Briyani** – 230
+- **Prawn Briyani** – 225
+- **Fish Briyani** – 225
+- **Chicken Tikka Briyani** – 225
+- **Tandoori Chicken Briyani** – 220
+- **Mixed Briyani** – 220
+- **Chicken Seeraga Samba** – 160
+- **Special Chicken Briyani** – 250
+- **Egg Briyani** – 150
+- **Egg Seeraga Samba** – 140
+- **Plain Briyani** – 140
+- **Plain Seeraga Samba** – 140
+- **Chicken Pulao** – 180
+
+## Fried Rice *(Non-Veg)*
+- **Egg Fried Rice** – 170
+- **Chicken Fried Rice** – 180
+- **Prawn Fried Rice** – 190
+- **Mutton Fried Rice** – 200
+- **Mixed Fried Rice** – 200
+- **Szechwan Chicken Fried Rice** – 190
+- **Szechwan Egg Fried Rice** – 180
+
+## Noodles *(Non-Veg)*
+- **Egg Noodles** – 160
+- **Chicken Noodles** – 175
+- **Prawn Noodles** – 190
+- **Mutton Noodles** – 190
+- **Mixed Noodles** – 200
+- **Szechwan Chicken Noodles** – 190
+- **Szechwan Egg Noodles** – 175
+
+## Veg Rice Varieties
+- **Veg Fried Rice** – 150
+- **Szechwan Veg Fried Rice** – 170
+- **Mushroom Fried Rice** – 175
+- **Paneer Fried Rice** – 175
+- **Veg Pulao** – 170
+- **Jeera Rice** – 170
+- **Ghee Rice** – 170
+- **Paneer & Peas Pulao** – 175
+- **Cashewnut Pulao** – 175
+
+## Veg Noodles
+- **Veg Noodles** – 160
+- **Szechwan Veg Noodles** – 170
+- **Mushroom Noodles** – 170
+- **Paneer Noodles** – 170
+
+---
+
+## Tandoor Breads
+- **Chapati** – 25
+- **Plain Naan** – 45
+- **Butter Naan** – 50
+- **Garlic Naan** – 60
+- **Tandoori Roti** – 50
+- **Butter Tandoori Roti** – 60
+
+## Dosai Varieties
+- **Dosai** – 60
+- **Kal Dosai** – 60
+- **Maavu Roast** – 80
+- **Ghee Roast** – 90
+- **Onion Dosai** – 75
+- **Egg Dosai** – 80
+- **Uttappam** – 60
+- **Onion Uthappam** – 70
+- **Egg Uthappam** – 75
+
+## New Moorthy Cafe’s Special Items
+- **Parotta** – 16
+- **Special Parotta** – 36
+- **Ghee Parotta** – 25
+- **Bun Parotta** – 20
+- **Nool Parotta** – 40
+- **Veetch Parotta** – 18
+- **Egg Veetch Parotta** – 90
+- **Wheat Parotta** – 18
+- **Plain Lappa** – 18
+- **Egg Lappa** – 70
+- **Special Egg Lappa** – 90
+- **Onion Egg Lappa** – 70
+- **Chicken Lappa** – 120
+- **Egg Kothu Parotta** – 125
+- **Veg Kothu Parotta** – 90
+- **Chicken Kothu Parotta** – 190
+- **Chilly Parotta** – 130
+
+---
+
+## Soft Drinks
+- **Goli Soda Lemon** – 30
+- **Goli Soda Panneer** – 30
+- **Goli Soda Blue Berry** – 30
+- **7 Up (750 ml)** – 40
+- **Sprite (750 ml)** – 40
+- **Coca-Cola (750 ml)** – 40
+- **7 Up (250 ml)** – 20
+- **Sprite (250 ml)** – 20
+- **Coca-Cola (250 ml)** – 20
+- **Pepsi** – 20
+- **M-Dew** – 20
+
+---
+
+*End of Menu*

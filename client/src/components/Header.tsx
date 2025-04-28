@@ -46,7 +46,13 @@ export default function Header() {
       <div className="container mx-auto px-4 py-2">
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="text-3xl font-bold font-cursive text-primary">Chidambaram New Moorthy Cafe</a>
+            <a href="/" className="flex items-center">
+              <img 
+                src="/assets/NMC_Logo.png" 
+                alt="Chidambaram New Moorthy Cafe Logo" 
+                className="h-16 mr-2"
+              />
+            </a>
           </div>
           
           {/* Desktop Navigation */}
