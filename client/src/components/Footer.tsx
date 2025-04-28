@@ -61,21 +61,14 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-xl mb-4">Newsletter</h4>
-            <p className="mb-4">Subscribe to our newsletter for special offers and updates.</p>
-            <form className="flex">
-              <Input 
-                type="email" 
-                placeholder="Your Email" 
-                className="px-4 py-2 rounded-l text-gray-800 w-full focus:outline-none" 
-              />
-              <Button 
-                type="submit" 
-                className="bg-primary text-white px-4 py-2 rounded-r hover:bg-primary/90 transition-all duration-300"
-              >
-                <SendIcon size={16} />
-              </Button>
-            </form>
+            <h4 className="text-xl mb-4">Visit Us</h4>
+            <p className="mb-4">We're open 7 days a week. Come experience the authentic taste of India.</p>
+            <Button 
+              onClick={() => window.location.href = '#contact'}
+              className="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition-all duration-300"
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
         

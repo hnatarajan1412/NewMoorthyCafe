@@ -1,18 +1,7 @@
 import { useState } from "react";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  Form, 
-  FormControl, 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormMessage 
-} from "@/components/ui/form";
 import { 
   MapPin, 
   Phone, 
@@ -20,41 +9,38 @@ import {
   Clock,
   Facebook,
   Instagram,
-  Twitter,
-  SendIcon
+  Twitter
 } from "lucide-react";
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" })
-});
-
-type FormValues = z.infer<typeof formSchema>;
-
 export default function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    }
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
   });
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  function onSubmit(data: FormValues) {
-    setIsSubmitting(true);
-    // In a real implementation, you would send the data to your server here
-    console.log(data);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // This is a static form, just show a success message
+    setFormSubmitted(true);
+    // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitting(false);
-      form.reset();
-    }, 1000);
-  }
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+      setFormSubmitted(false);
+    }, 3000);
+  };
 
   return (
     <section id="contact" className="py-16 bg-[#F5F5F5]">
@@ -72,92 +58,76 @@ export default function ContactSection() {
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="font-serif text-2xl mb-6">Send us a Message</h3>
               
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                  <FormField
-                    control={form.control}
+              {formSubmitted ? (
+                <div className="bg-green-50 text-green-800 p-4 rounded-md mb-4">
+                  <h4 className="font-medium text-lg mb-2">Message Received!</h4>
+                  <p>Thank you for contacting us. We will get back to you soon.</p>
+                </div>
+              ) : null}
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 mb-2">Name</label>
+                  <Input 
+                    id="name"
                     name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-700">Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your Name" 
-                            {...field} 
-                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your Name" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                    required
                   />
-                  
-                  <FormField
-                    control={form.control}
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                  <Input 
+                    id="email"
                     name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-700">Email</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your Email" 
-                            type="email" 
-                            {...field} 
-                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Your Email" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                    required
                   />
-                  
-                  <FormField
-                    control={form.control}
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-gray-700 mb-2">Phone</label>
+                  <Input 
+                    id="phone"
                     name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-700">Phone</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your Phone" 
-                            type="tel" 
-                            {...field} 
-                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Your Phone" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                    required
                   />
-                  
-                  <FormField
-                    control={form.control}
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 mb-2">Message</label>
+                  <Textarea 
+                    id="message"
                     name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-700">Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Your Message" 
-                            {...field} 
-                            rows={4}
-                            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your Message" 
+                    rows={4}
+                    className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                    required
                   />
-                  
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="bg-primary text-white px-6 py-3 rounded hover:bg-primary/90 transition-all duration-300 w-full"
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </Form>
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  className="bg-primary text-white px-6 py-3 rounded hover:bg-primary/90 transition-all duration-300 w-full"
+                >
+                  Send Message
+                </Button>
+              </form>
             </div>
           </div>
           
