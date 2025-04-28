@@ -35,6 +35,7 @@ export default function Footer() {
               <li><a href="#gallery" className="hover:text-primary transition-colors">Gallery</a></li>
               <li><a href="#reviews" className="hover:text-primary transition-colors">Reviews</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/franchise" className="text-primary transition-colors">Franchise</a></li>
             </ul>
           </div>
           

@@ -77,6 +77,12 @@ export default function Header() {
             >
               Contact
             </a>
+            <a 
+              href="/franchise" 
+              className="font-medium text-primary transition-colors duration-300 cursor-pointer"
+            >
+              Franchise
+            </a>
           </div>
           
           {/* Mobile Menu Button */}
@@ -144,6 +150,12 @@ export default function Header() {
             className="font-medium hover:text-primary transition-colors duration-300 cursor-pointer"
           >
             Contact
+          </a>
+          <a 
+            href="/franchise" 
+            className="font-medium text-primary transition-colors duration-300 cursor-pointer"
+          >
+            Franchise
           </a>
           <Button 
             onClick={() => scrollToSection("contact")}
