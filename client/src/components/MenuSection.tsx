@@ -80,12 +80,18 @@ export default function MenuSection() {
   });
 
   return (
-    <section id="menu" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="menu" className="py-16 bg-white relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-8">
+        <svg viewBox="0 0 1200 30" className="fill-[#C30010] w-full h-8 rotate-180">
+          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
+        </svg>
+      </div>
+    
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl mb-4">Our Menu</h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg max-w-4xl mx-auto text-gray-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#C30010] uppercase tracking-wide">Our Menu</h2>
+          <div className="w-24 h-1 bg-[#FFB800] mx-auto mb-6"></div>
+          <p className="text-gray-700 max-w-4xl mx-auto">
             Explore our wide selection of authentic South Indian dishes prepared with exclusive hand-picked spices and traditional methods.
           </p>
         </div>
@@ -96,10 +102,10 @@ export default function MenuSection() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full transition-colors whitespace-nowrap ${
+                className={`px-6 py-2 rounded-md transition-colors whitespace-nowrap font-bold uppercase tracking-wide ${
                   activeCategory === category
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    ? 'bg-[#C30010] text-white border-2 border-[#FFB800]'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-transparent'
                 }`}
               >
                 {category}
@@ -127,21 +133,30 @@ export default function MenuSection() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems?.map((item) => (
-              <div key={item.id} className="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
-                <div className="overflow-hidden h-64">
-                  <img 
-                    src={item.image} 
-                    alt={item.name} 
-                    className="w-full h-full object-cover menu-img-hover transition-all duration-300" 
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-serif text-2xl">{item.name}</h3>
-                    <span className="text-primary font-bold">₹{item.price}</span>
+              <div key={item.id} className="menu-item bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200">
+                <div className="relative">
+                  <div className="overflow-hidden h-64">
+                    <img 
+                      src={item.image} 
+                      alt={item.name} 
+                      className="w-full h-full object-cover menu-img-hover transition-all duration-300" 
+                    />
                   </div>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
-                  <button className="text-primary font-medium hover:underline">Add to Order</button>
+                  {item.isPopular && (
+                    <div className="absolute top-3 right-3 bg-[#FFB800] text-[#C30010] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                      Popular
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 border-t-4 border-[#C30010]">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-bold text-[#C30010]">{item.name}</h3>
+                    <span className="text-[#C30010] bg-[#FFB800] px-3 py-1 rounded-full font-bold">₹{item.price}</span>
+                  </div>
+                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <button className="bg-[#C30010] text-white font-bold py-2 px-4 rounded-md hover:bg-[#C30010]/90 transition-all duration-300 w-full uppercase tracking-wide">
+                    Add to Order
+                  </button>
                 </div>
               </div>
             ))}
@@ -149,10 +164,16 @@ export default function MenuSection() {
         )}
         
         <div className="text-center mt-12">
-          <Button className="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 text-lg font-medium">
+          <Button className="bg-[#C30010] text-white border-2 border-[#FFB800] px-8 py-3 rounded-md hover:bg-[#C30010]/90 transition-all duration-300 text-lg font-bold uppercase tracking-wide">
             View Full Menu
           </Button>
         </div>
+      </div>
+      
+      <div className="absolute bottom-0 left-0 w-full h-8">
+        <svg viewBox="0 0 1200 30" className="fill-[#C30010] w-full h-8">
+          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
+        </svg>
       </div>
     </section>
   );
