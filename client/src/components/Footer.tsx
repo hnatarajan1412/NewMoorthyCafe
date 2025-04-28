@@ -5,11 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer className="bg-[#C30010] text-white py-12 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-8">
-        <svg viewBox="0 0 1200 30" className="fill-white w-full h-8 rotate-180">
-          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
-        </svg>
-      </div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-white"></div>
       
       <div className="absolute inset-0 opacity-10" 
            style={{

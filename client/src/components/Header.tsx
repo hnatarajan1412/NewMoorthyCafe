@@ -131,12 +131,8 @@ export default function Header() {
         </nav>
       </div>
       
-      {/* Wave Pattern */}
-      <div className="w-full overflow-hidden">
-        <svg viewBox="0 0 1200 30" className="fill-[#FFB800] w-full h-6">
-          <path d="M0,30 C200,10 400,30 600,15 C800,0 1000,20 1200,5 L1200,30 L0,30 Z"></path>
-        </svg>
-      </div>
+      {/* Straight Line Divider */}
+      <div className="w-full h-1 bg-[#FFB800]"></div>
       
       {/* Mobile Navigation Menu */}
       <div 
