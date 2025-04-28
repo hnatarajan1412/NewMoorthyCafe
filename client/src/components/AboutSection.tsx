@@ -41,7 +41,7 @@ export default function AboutSection() {
           </div>
           <div className="order-1 md:order-2">
             <img 
-              src="/assets/images/southindian_restaurant.jpg" 
+              src="./assets/images/southindian_restaurant.jpg" 
               alt="New Moorthy Cafe Restaurant Interior" 
               className="rounded-lg shadow-xl h-[500px] w-full object-cover" 
             />

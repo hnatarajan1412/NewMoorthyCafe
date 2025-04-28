@@ -48,7 +48,7 @@ export default function Header() {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
-                src="/assets/NMC_Logo.png" 
+                src="./assets/NMC_Logo.png" 
                 alt="Chidambaram New Moorthy Cafe Logo" 
                 className="h-16 mr-2"
               />

@@ -27,15 +27,15 @@ export default function HeroSection() {
 
   const carouselImages = [
     {
-      src: "/assets/images/southindian_food1.jpg",
+      src: "./assets/images/southindian_food1.jpg",
       alt: "South Indian Dishes"
     },
     {
-      src: "/assets/images/dosa.jpg",
+      src: "./assets/images/dosa.jpg",
       alt: "South Indian Dosa"
     },
     {
-      src: "/assets/images/southindian_thali.jpg",
+      src: "./assets/images/southindian_thali.jpg",
       alt: "South Indian Thali"
     }
   ];
