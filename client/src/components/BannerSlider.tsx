@@ -20,10 +20,10 @@ export function BannerSlider({ images }: { images: string[] }) {
         slidesPerView={1}
         breakpoints={{
           640: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 0,
           },
-          768: {
+          1024: {
             slidesPerView: 3,
             spaceBetween: 0,
           }
@@ -34,14 +34,14 @@ export function BannerSlider({ images }: { images: string[] }) {
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="w-full h-[50vh] bg-center bg-cover relative"
+              className="w-full h-[60vh] bg-center bg-cover relative"
               style={{
                 backgroundImage: `url(${src})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             >
-              <div className="absolute inset-0 border-r-2 border-[#FFB800]/50"></div>
+              <div className="absolute inset-0 border-r-2 border-[#FFB800]/30"></div>
             </div>
           </SwiperSlide>
         ))}

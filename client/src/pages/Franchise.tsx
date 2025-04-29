@@ -10,37 +10,39 @@ export default function Franchise() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/90 to-primary text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="font-serif text-4xl md:text-6xl mb-4"
-            >
-              Franchise Opportunities
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl max-w-4xl mx-auto mb-8"
-            >
-              Join the Chidambaram New Moorthy Cafe family and bring authentic South Indian cuisine to your community
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
+        <section className="pt-[60px] md:pt-[80px] relative h-[60vh] flex items-center">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: 'url("/assets/images/franchise-banner.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          ></div>
+          
+          <div className="absolute inset-0 bg-[#C30010]/80 z-0"></div>
+          
+          {/* Main title - small overlay at bottom center */}
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20 text-center">
+            <div className="bg-black/40 backdrop-blur-sm py-2 px-6 inline-block">
+              <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg">
+                Franchise Opportunities
+              </h1>
+              <div className="w-56 h-1 bg-[#FFB800] mx-auto my-2"></div>
+              <p className="text-white text-lg md:text-xl drop-shadow-lg mb-6">
+                Join the Chidambaram New Moorthy Cafe family
+              </p>
               <Button 
                 onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-full text-lg font-medium"
+                className="bg-[#FFB800] text-[#C30010] hover:bg-[#FFB800]/90 px-8 py-3 rounded-md text-lg font-bold"
               >
                 Apply Now
               </Button>
-            </motion.div>
+            </div>
           </div>
+          
+          {/* Bottom Border */}
+          <div className="absolute bottom-0 left-0 w-full h-2 bg-[#FFB800] z-30"></div>
         </section>
 
         {/* Our Legacy Section */}
@@ -48,7 +50,7 @@ export default function Franchise() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-5xl mb-4">A Legacy to Remember</h2>
-              <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+              <div className="w-24 h-1 bg-[#FFB800] mx-auto mb-6"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -86,7 +88,7 @@ export default function Franchise() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-5xl mb-4">Our Signature Dishes</h2>
-              <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+              <div className="w-24 h-1 bg-[#FFB800] mx-auto mb-6"></div>
               <p className="text-lg max-w-4xl mx-auto text-gray-600 mb-10">
                 These are the culinary masterpieces that have made us famous and will be the cornerstone of your franchise success
               </p>
