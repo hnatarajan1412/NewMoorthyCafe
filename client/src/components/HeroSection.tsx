@@ -24,14 +24,14 @@ export default function HeroSection() {
   return (
     <>
       <section id="home" className="pt-[60px] md:pt-[80px] relative">
-        {/* Main title */}
+        {/* Main title - smaller overlay like reference */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center w-full px-4">
-          <div className="bg-black/30 backdrop-blur-sm py-8 px-10 rounded-lg inline-block border-2 border-[#FFB800]">
-            <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg mb-2">
-              Chidambaram New Moorthy Cafe
+          <div className="bg-black/30 backdrop-blur-sm py-3 px-6">
+            <h1 className="text-white text-4xl md:text-5xl font-bold drop-shadow-lg">
+              Chidambaram<br className="hidden md:inline" /> New Moorthy Cafe
             </h1>
-            <div className="w-40 h-1 bg-[#FFB800] mx-auto mb-6"></div>
-            <p className="text-white text-xl md:text-2xl drop-shadow-lg">Since 1955</p>
+            <div className="w-32 h-1 bg-[#FFB800] mx-auto my-2"></div>
+            <p className="text-white text-xl drop-shadow-lg">Since 1955</p>
           </div>
         </div>
         
