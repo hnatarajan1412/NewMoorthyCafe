@@ -14,22 +14,22 @@ export default function TestimonialsSection() {
   
   const testimonials: Testimonial[] = [
     {
-      name: "Sarah Johnson",
-      avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+      name: "Venkatesh J",
+      avatar: "",
       rating: 5,
-      text: "Absolutely amazing food! The butter chicken was the best I've ever had. The flavors were authentic and the service was excellent. Will definitely be coming back!"
+      text: "All the items taste was good. Especially the mutton biriyani was awesome. The price is reasonable and the quantity is more. One starters and one gravy is more than sufficient for two people. Fluffy barotta was also good. For 200 Rs Prawn masala was good and the quantity was also more."
     },
     {
-      name: "Michael Patel",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      name: "Kabhilan D",
+      avatar: "",
       rating: 4.5,
-      text: "As someone who grew up with Indian food, I can confidently say that Thaliwala offers authentic flavors that remind me of home. The paneer tikka and naan bread were exceptional."
+      text: "Went for the famous name itself. Nool Parotta is perfectly cooked. Kadai chicken along with cashews & onions is a good combo along with it as suggested by servers. But I hardly missed trying Egg chutney, Customer service is good. Ambience is also good."
     },
     {
-      name: "Emma Rodriguez",
-      avatar: "https://randomuser.me/api/portraits/women/42.jpg",
+      name: "Hariharasudhan",
+      avatar: "",
       rating: 5,
-      text: "The ambiance is wonderful and the food is out of this world! I tried the vegetable biryani and was blown away by the depth of flavors. The staff was friendly and attentive."
+      text: "One of the best underrated non veg food in kumbakonam hattss off to you...."
     }
   ];
 

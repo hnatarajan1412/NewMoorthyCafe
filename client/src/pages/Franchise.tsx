@@ -56,10 +56,13 @@ export default function Franchise() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-gray-700 mb-4 text-lg">
-                  The history of New Moorthy Cafe dates back to 1955, when it was founded by Mr. S. Dhakshina Moorthy and Mrs. Nagavalli Ammal. Originally established as Moorthy Cafe Veg and Non-Veg Hotel, it quickly gained fame for its unique taste and name.
+                The History of Moorthy Cafe can be traced all the way back to 1955. Founded by Mr. S. Dhakshina Moorthy and Mrs. Nagavalli under the name of Moorthy Cafe Veg and Non-Veg Hotel, which over the years have become famous with its name and cooking style. It was first originated in North Main Road, Chidambaram. Mr. S. Dhakshina Moorthy soul reached god on 20-08-1976. New Moorthy Cafe started at Thandai Periyar Bus stand by Mr. S. Dhakshina Moorthy's sons following his footsteps. Multiple branches in the name of Moorthy Cafe evolved around the year in different places of Chidambaram.
                 </p>
                 <p className="text-gray-700 mb-6 text-lg">
-                  After Mr. Moorthy, his sons took over and expanded the business. As a testament to its success, multiple branches under the New Moorthy Cafe brand have opened across Chidambaram and other areas, all while maintaining our deep commitment to delighting your taste buds.
+                Moorthy Cafe have created a range of South Indian vegetarian and Non-Vegetarian dishes for you to enjoy. Food is their passion, prepared for you always with devotion, love, and the finest ingredients. Since it was established, Moorthy Cafe has grown in popularity through the exceptional quality of service and food.
+                </p>
+                <p className="text-gray-700 mb-6 text-lg">
+                Apt restaurant temperature, ambient lighting conditions, pleasant decor, comfortable seating arrangement and backed by a dedicated team of workers, chef and management who are working around the clock striving to take care of every intricate needs to provide its customers with the complete pleasurable experience.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-50 p-4 rounded-lg text-center">
@@ -67,15 +70,15 @@ export default function Franchise() {
                     <span className="text-gray-600">Years of Excellence</span>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg text-center">
-                    <span className="block text-primary font-bold text-3xl">15+</span>
+                    <span className="block text-primary font-bold text-3xl">50+</span>
                     <span className="text-gray-600">Signature Dishes</span>
                   </div>
                 </div>
               </div>
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1514222788835-3a1a1d5b32f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" 
-                  alt="Restaurant Interior" 
+                  src="/assets/images/Legacy.png" 
+                  alt="New Moorthy Cafe Legacy" 
                   className="rounded-lg shadow-xl w-full h-auto object-cover" 
                 />
               </div>
@@ -98,8 +101,8 @@ export default function Franchise() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                    alt="Butter Chicken" 
+                    src="/assets/images/Kadai-Chicken.jpg"
+                    alt="Kadai Chicken" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                   />
                 </div>
@@ -112,7 +115,7 @@ export default function Franchise() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1628294895950-9805252327bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                    src="/assets/images/parotta.jpeg"
                     alt="Soft Layered Parotta" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                   />
@@ -140,8 +143,8 @@ export default function Franchise() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                    alt="Biryani" 
+                    src="/assets/images/Mutton_briyani.jpeg"
+                    alt="Mutton Biryani" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                   />
                 </div>

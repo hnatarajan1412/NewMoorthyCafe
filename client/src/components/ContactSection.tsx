@@ -179,7 +179,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Email</h4>
-                  <p className="text-gray-600">newmoorthycafe@gmail.com</p>
+                  <p className="text-gray-600">newmoorthycafeindia@gmail.com</p>
                 </div>
               </div>
 

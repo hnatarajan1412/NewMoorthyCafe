@@ -44,7 +44,7 @@ export default function AboutSection() {
           <div className="order-1 md:order-2">
             <div className="relative mx-auto w-fit">
               <img 
-                src="/assets/images/southindian_restaurant.jpg" 
+                src="/assets/images/mohan_sir.jpg"
                 alt="New Moorthy Cafe Restaurant Interior" 
                 className="rounded-full border-4 border-[#FFB800] shadow-xl h-80 w-80 object-cover" 
               />

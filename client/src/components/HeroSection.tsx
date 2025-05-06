@@ -78,18 +78,20 @@ export default function HeroSection() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+              href="/franchise" >
                 <Button 
-                  onClick={() => scrollToSection("menu")}
                   className="bg-[#FFB800] text-[#C30010] px-8 py-3 rounded-md hover:bg-[#FFB800]/90 transition-all duration-300 text-base font-bold uppercase shadow-lg"
                 >
-                  View Menu
+                  Franchise
                 </Button>
+                </a>
                 <Button 
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => scrollToSection("menu")}
                   variant="outline" 
                   className="border-2 border-[#FFB800] bg-transparent text-[#FFB800] px-8 py-3 rounded-md hover:bg-[#FFB800]/10 transition-all duration-300 text-base font-medium uppercase"
                 >
-                  Book a Table
+                  View Menu
                 </Button>
               </div>
             </div>

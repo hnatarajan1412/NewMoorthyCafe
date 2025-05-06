@@ -83,7 +83,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail className="mt-1 mr-3 text-[#FFB800]" size={18} />
-                <span>info@newmoorthycafe.com</span>
+                <span>newmoorthycafeindia@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <Clock className="mt-1 mr-3 text-[#FFB800]" size={18} />

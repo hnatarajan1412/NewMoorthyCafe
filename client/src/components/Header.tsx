@@ -48,7 +48,7 @@ export default function Header() {
           <div className="flex items-center flex-shrink-0">
             <a href="/" className="flex items-center">
               <img 
-                src="/assets/NMC_Logo.png" 
+                src="/assets/images/NMC_Logo.jpg" 
                 alt="Chidambaram New Moorthy Cafe Logo" 
                 className="h-12 md:h-16 rounded-full border-2 border-[#FFB800] bg-white p-1"
               />
@@ -102,7 +102,7 @@ export default function Header() {
           </div>
           
           {/* Order Button - Desktop */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <div className="rounded bg-white px-3 py-2 text-center">
               <div className="font-bold text-[#C30010] text-sm">Order Now</div>
               <Button 
@@ -112,7 +112,7 @@ export default function Header() {
                 +91 93808 99999
               </Button>
             </div>
-          </div>
+          </div> */}
           
           {/* Mobile Menu Button */}
           <div className="md:hidden ml-auto">
@@ -179,11 +179,11 @@ export default function Header() {
           </a>
           <a 
             href="/franchise" 
-            className="font-medium text-[#FFB800] transition-colors duration-300 cursor-pointer py-1 uppercase"
+            className="bg-[#FFB800] text-[#C30010] px-4 py-1 rounded font-bold hover:bg-[#FFB800]/90 transition-all duration-300 w-full"
           >
             Franchise
           </a>
-          <div className="pt-2">
+          {/* <div className="pt-2">
             <div className="bg-white rounded-md p-2 flex flex-col items-center">
               <div className="text-[#C30010] font-bold mb-1">Order Now</div>
               <Button 
@@ -193,7 +193,7 @@ export default function Header() {
                 +91 93808 99999
               </Button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
